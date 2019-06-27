@@ -5,13 +5,10 @@ body {
   font-size: 20px;
 }
 
-main {
-
-}
-
 h1 {
   color: green;
   font-size: 2em;
+  text-align: center;
 }
 
 h2 {
@@ -19,7 +16,16 @@ h2 {
 }
 
 p {
-font-size: 0.75em;
+font-size: 0.75rem;
+}
+
+figure {
+  width: 500px;
+  text-align: center;
+}
+
+image {
+  max-width: 100%;
 }
 
 
