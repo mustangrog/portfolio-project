@@ -1,5 +1,21 @@
 body {
   font-family: "roboto", sans-serif;
-  background: grey
+  background: rgba(100, 100, 100, 0.5);
+  color: rgb(248, 6, 6);
+  font-size: 15px;
 }
+
+h1 {
+  color: green;
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+font-size: 0.75em;
+}
+
 
