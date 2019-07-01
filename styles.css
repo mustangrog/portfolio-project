@@ -20,11 +20,12 @@ font-size: 0.75rem;
 }
 
 figure {
-  width: 500px;
+  width: 100vw;
   text-align: center;
+  margin: 25px auto;
 }
 
-image {
+img {
   max-width: 100%;
 }
 
