@@ -5,6 +5,12 @@ body {
   font-size: 20px;
 }
 
+figure {
+  width: 100vw;
+  text-align: center;
+  margin: 25px auto;
+}
+
 h1 {
   color: green;
   font-size: 2em;
@@ -19,14 +25,17 @@ p {
 font-size: 0.75rem;
 }
 
-figure {
-  width: 100vw;
-  text-align: center;
-  margin: 25px auto;
-}
-
+/* responsive page */
 img {
   max-width: 100%;
 }
 
+li {
+  list-style-type: none;
+}
 
+section {
+  font-size: 10px;
+}
+
+/* Navigation */
