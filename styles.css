@@ -68,3 +68,17 @@ nav > ul {
   flex-direction: column;
   position: absolute;
 }
+/* Hero */
+header {
+  align-items: center;
+  background: url(https://picsum.photos/1000/550) no-repeat top center;
+  /* background-image: url(https://picsum.photos/1000/550)
+  background-repeat: no-repeat;
+  background-position: top center; */
+  background-size: cover;
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+
+}
