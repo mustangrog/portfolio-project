@@ -59,6 +59,7 @@ nav > ul {
 .dropdown:hover ul {
   display: flex;
 }
+
 .dropdown ul {
   background-color: white;
   border-radius: 0 0 5px 5px;
@@ -66,19 +67,26 @@ nav > ul {
   padding: 8px;
   display: none;
   flex-direction: column;
-  position: absolute;
+  position: absolute
 }
 /* Hero */
-header {
+header, header div {
   align-items: center;
-  background: url(https://picsum.photos/1000/550) no-repeat top center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
   /* background-image: url(https://picsum.photos/1000/550)
   background-repeat: no-repeat;
   background-position: top center; */
+  background: url(https://picsum.photos/1000/550) no-repeat top center;
   background-size: cover;
-  display: flex;
   height: 80vh;
-  flex-direction: column;
-  justify-content: center;
+}
 
+header div {
+  background: rgba(100, 100, 100, 0.5);
+  width: 100%;
 }
