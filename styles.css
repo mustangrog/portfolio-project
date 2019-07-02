@@ -1,7 +1,6 @@
 body {
   font-family: "roboto", sans-serif;
   background: rgba(100 , 100, 100, 0.5);
-  color: rgb(248, 6, 6);
   font-size: 20px;
 }
 
@@ -12,13 +11,15 @@ figure {
 }
 
 h1 {
-  color: green;
+  color: rgb(39, 38, 38);
+  text-shadow: #5f5d5d 3px 3px;
   font-size: 2em;
   text-align: center;
 }
 
 h2 {
   font-size: 1.5em;
+  color: rgb(39, 38, 38);
 }
 
 p {
@@ -81,7 +82,7 @@ header {
   /* background-image: url(https://picsum.photos/1000/550)
   background-repeat: no-repeat;
   background-position: top center; */
-  background: url(https://picsum.photos/1000/550) no-repeat top center;
+  background: url(https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/13055165_10208005819878105_2627498958280177278_o.jpg?_nc_cat=110&_nc_oc=AQnhDzBWI_HrSga3adNaQ2dvZ4GuCSff-NuFqVSiXftpPc_9bZALacPip7sOKGtcuY8&_nc_ht=scontent-ort2-2.xx&oh=d959a0aa288e2f8db3485533d143b358&oe=5DC2F6FC) no-repeat top center;
   background-size: cover;
   height: 80vh;
 }
@@ -112,6 +113,18 @@ main section h2 {
 
 /* Footer */
 
-footer li {
+/* footer li {
   display: inline-block;
+} */
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+}
+/* basic button styling */
+
+.cta-btn:hover {
+  background-color: blue;
+  transition: 0.6s;
 }
