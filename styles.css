@@ -38,4 +38,33 @@ section {
   font-size: 10px;
 }
 
+ul {
+  padding: 0;
+}
+
 /* Navigation */
+nav {
+  background-color: white;
+  padding: 10px 0;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+/* Generally focus goes with hover state to help with keyboard navigation and accessability */
+.dropdown:focus ul,
+.dropdown:hover ul {
+  display: flex;
+}
+.dropdown ul {
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 3px 5px 5px rgba(100, 100, 100, 0.5);
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+}
