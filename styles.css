@@ -1,6 +1,6 @@
 body {
   font-family: "roboto", sans-serif;
-  background: rgba(100, 100, 100, 0.5);
+  background: rgba(100 , 100, 100, 0.5);
   color: rgb(248, 6, 6);
   font-size: 20px;
 }
@@ -89,4 +89,29 @@ header {
 header div {
   background: rgba(100, 100, 100, 0.5);
   width: 100%;
+}
+
+/* main */
+
+main {
+  display: flex;
+
+}
+
+main > section {
+  margin: 10px;
+  background: rgba(100, 100, 100, 0.5);
+  padding: 15px;
+  color: #333333;
+}
+
+main section h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer li {
+  display: inline-block;
 }
