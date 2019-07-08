@@ -95,7 +95,6 @@ header div {
 
 main {
   display: flex;
-
 }
 
 main > section {
@@ -171,4 +170,19 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   max-width: 50%;
+}
+
+.about-me-photo {
+  display: block;
+  margin: 20px auto;
+  width: 15%;
+  height: auto;
+}
+
+.about-me-text {
+  display: block;
+  text-align: justify;
+  margin: 2px auto;
+  width: 40%;
+  font-size: 1em;
 }
