@@ -136,6 +136,7 @@ footer ul {
   display: flex;
   justify-content: space-around;
   padding: 0px;
+  font-size: 40px;
 }
 
 /* Form */
