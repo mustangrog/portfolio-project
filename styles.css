@@ -46,7 +46,7 @@ ul {
 
 /* Navigation */
 nav {
-  background-color: white;
+  background-color: rgb(212, 211, 211);
   padding: 10px 0;
 }
 
@@ -120,7 +120,7 @@ main section h2 {
   text-transform: uppercase;
 }
 
-.cta-btn:focus
+.cta-btn:focus,
 .cta-btn:hover {
   background-color: yellowgreen;
   transition: 0.25s;
