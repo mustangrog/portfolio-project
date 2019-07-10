@@ -7,3 +7,5 @@
 */
 
 const name = prompt('What is your name?');
+
+document.querySelector('h1').textContent = `Hello, ${name}`;
