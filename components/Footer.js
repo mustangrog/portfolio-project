@@ -1,4 +1,5 @@
-export default `
+export default function(){
+    return `
 <footer>
 <ul>
   <li>
@@ -21,5 +22,5 @@ export default `
   </li>
 </ul>
 </footer>
-`
-;
+  `;
+}

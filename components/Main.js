@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
 <main>
 <!-- Sections are like subtopics directly related to the general topic of the page -->
 <section>
@@ -36,4 +37,5 @@ export default `
 </section>
 </main>
 `
-;
+    ;
+}
