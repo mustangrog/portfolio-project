@@ -1,3 +1,4 @@
+//  Brings in the functional data
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -16,35 +17,47 @@ const states = {
 };
 
 function render(state){
+    console.log('state came in as:', state);
+
+    // We use function invocation that actually runs the function. and then 'return' the markup so that is is properly rendered in the browser
     document.querySelector('#root').innerHTML = `
-  ${Navigation(state)}
-  ${Header(state)}
-  ${Main(state)}
-  ${Footer(state)}
-  `;
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Main(state)}
+    ${Footer(state)}
+    `;
 }
 
 render(states.home);
 // The elements will not exist until page is rendered.  This is placed after the render item.
 const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
 
-let i = 0;
+navItems.forEach(function eventListenerAdder(navItem){
+    navItem.addEventListener('click', function clickHandler(event){
+        event.preventDefault();
+        render(states[event.target.textContent.toLowerCase()]);
+    });
+});
+
 // TODO: Refactor this loop structure
 // Use the value of i as an index to access the nav item.
 // Here I will run until 0-3, once it hits 3 the while statement stops.
 
-while(i < navItems.length){
-    // Ass this callback function to each of the navItems.
-    navItems[i].addEventListener('click', function clickHandler(event){
-        event.preventDefault();
-        // 'target' will reveal what generated the event - that is, what was 'clicked'.
-        const clickedItem = event.target.textContent;
-        const clicked = clickedItem.toLowerCase();
+// while(i < navItems.length){
+//     // Add this callback function to each of the navItems.
+//     navItems[i].addEventListener('click', function clickHandler(event){
+//         event.preventDefault();
+//         // 'target' will reveal what generated the event - that is, what was 'clicked'.
+//         const clickedItem = event.target.textContent;
+//         const clicked = clickedItem.toLowerCase();
 
-        render(states[clicked]);
-    });
-    i++;
-}
+//         // TODO: [textContent.toLowerCase()];
+
+
+//         render(states[clicked]);
+//     });
+//     i++;
+// }
 
 // We want to re-render our page based on what the user clicks in our nav menu.
 /*
