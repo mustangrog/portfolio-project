@@ -26,15 +26,18 @@ function render(state){
     ${Main(state)}
     ${Footer(state)}
     `;
-}
 
+    const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
+
+    navItems.forEach(function eventListenerAdder(navItem){
+        navItem.addEventListener('click', function clickHandler(event){
+            event.preventDefault();
+
+            render(states[event.target.textContent.toLowerCase()]);
+        });
+    });
+}
 render(states.home);
 // The elements will not exist until page is rendered.  This is placed after the render item.
-const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
 
-navItems.forEach(function eventListenerAdder(navItem){
-    navItem.addEventListener('click', function clickHandler(event){
-        event.preventDefault();
-        render(states[event.target.textContent.toLowerCase()]);
-    });
-});
+
