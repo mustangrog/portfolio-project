@@ -5,10 +5,6 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 const store = {
-    'links': {
-        'primary': [ 'Home', 'About', 'Contact' ],
-        'dropdown': [ 'Project', 'Project 2', 'Project 3' ]
-    },
     'home': {
         'title': 'This is the home page!',
         'page': `<!-- Sections are like subtopics directly related to the general topic of the page -->
@@ -47,6 +43,10 @@ const store = {
         </section>`
     },
     'about': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project', 'Project 2', 'Project 3' ]
+        },
         'title': 'About Page',
         'page': `<!DOCTYPE html>
         <html lang="en">
@@ -133,6 +133,10 @@ const store = {
         `
     },
     'contact': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project', 'Project 2', 'Project 3' ]
+        },
         'title': 'Contact',
         'page': `<!DOCTYPE html>
         <html lang="en">
