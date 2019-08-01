@@ -8,7 +8,7 @@ const store = {
     'home': {
         'links': {
             'primary': [ 'Home', 'About', 'Contact' ],
-            'dropdown': [ 'Project', 'Project 2', 'Project 3' ]
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'This is the home page!',
         'page': `
@@ -50,7 +50,7 @@ const store = {
     'about': {
         'links': {
             'primary': [ 'Home', 'About', 'Contact' ],
-            'dropdown': [ 'Project', 'Project 2', 'Project 3' ]
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'About Page',
         'page': `
@@ -67,7 +67,7 @@ const store = {
     'contact': {
         'links': {
             'primary': [ 'Home', 'About', 'Contact' ],
-            'dropdown': [ 'Project', 'Project 2', 'Project 3' ]
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'Contact',
         'page': `
