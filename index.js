@@ -11,13 +11,13 @@ import Navigo from 'navigo';
  * location.origin provides the 'base' URL for Navigo to get started.
  * new creates a new instance of Navigo from it's constructor function.
  */
-const router = Navigo(location.origin);
+const router = new Navigo(location.origin);
 
 
 const store = {
     'home': {
         'links': {
-            'primary': [ 'Home', 'About', 'Contact' ],
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'This is the home page!',
@@ -59,7 +59,7 @@ const store = {
     },
     'about': {
         'links': {
-            'primary': [ 'Home', 'About', 'Contact' ],
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'About Page',
@@ -76,7 +76,7 @@ const store = {
     },
     'contact': {
         'links': {
-            'primary': [ 'Home', 'About', 'Contact' ],
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'Contact',
@@ -167,6 +167,18 @@ const store = {
         </div>
     </form>
         `
+    },
+    'blog': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
+        'title': 'Blog Page',
+
+        // TODO: 'page' will be updated after we fetch the data for the blog post.
+        'page': `
+        <p>Loading blog posts!</p>
+        `
     }
 };
 
@@ -182,6 +194,7 @@ function render(state){
     // updatePageLinks() works in conjunction with 'data-navigo' and the <a href>s found in the Navigation functional component.
     router.updatePageLinks();  // Replaces our custom click event listeners with the recursive render.
 }
+
 render(store.home);
 // The elements will not exist until page is rendered.  This is placed after the render item.
 
