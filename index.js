@@ -4,6 +4,16 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
+// Import the Navigo constructor function from the node module called "navigo".
+import Navigo from 'navigo';
+
+/**
+ * location.origin provides the 'base' URL for Navigo to get started.
+ * new creates a new instance of Navigo from it's constructor function.
+ */
+const router = Navigo(location.origin);
+
+
 const store = {
     'home': {
         'links': {
@@ -176,5 +186,5 @@ render(store.home);
 // The elements will not exist until page is rendered.  This is placed after the render item.
 
 router.on(':view', function renderFromParams(params){
-    render(store[rarams.view]);
+    render(store[params.view]);
 }).resolve();
