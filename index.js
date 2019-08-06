@@ -169,19 +169,12 @@ function render(state){
     ${Footer(state)}
     `;
 
-    // Note: the 'navigation' functional component renders 'new' links each and every time/  Therefore on each re-render, we must grab those links and re-attach the event listeners to respond to 'clicks'.
-
-    const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
-
-    navItems.forEach(function eventListenerAdder(navItem){
-        navItem.addEventListener('click', function clickHandler(event){
-            event.preventDefault();
-
-            render(store[event.target.textContent.toLowerCase()]);
-        });
-    });
+    // updatePageLinks() works in conjunction with 'data-navigo' and the <a href>s found in the Navigation functional component.
+    router.updatePageLinks();  // Replaces our custom click event listeners with the recursive render.
 }
 render(store.home);
 // The elements will not exist until page is rendered.  This is placed after the render item.
 
-
+router.on(':view', function renderFromParams(params){
+    render(store[rarams.view]);
+}).resolve();
