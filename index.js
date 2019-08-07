@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 // Import the Navigo constructor function from the node module called "navigo".
 import Navigo from 'navigo';
+import axios from 'axios';
 
 /**
  * location.origin provides the 'base' URL for Navigo to get started.
@@ -204,20 +205,36 @@ router
     })
     .resolve();
 
-fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((response) => response.json())
-    .then((blogPosts) => {
-        // blogPosts is an 'Array' of the object literals
-        const blogHTML = blogPosts.map((blogPost) => `
+axios.get('https://jsonplaceholder.typicode.com/posts').then((response) => {
+    const blogPosts = response.data;
+
+    const blogHTML = blogPosts
+        .map((blogPost) => `
         <section>
         <h2>${blogPost.title}</h2>
         <p>${blogPost.body}</p>
         </section>
-        `).join(' ');
+        `
+        )
+        .join(' ');
 
-        store.blog.page = blogHTML;
-        // section
-        // <h2>titles</h2>
-        // <p>body</P>
-        // </section>
-    });
+    store.blog.page = blogHTML;
+});
+
+// fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then((response) => response.json())
+//     .then((blogPosts) => {
+//         // blogPosts is an 'Array' of the object literals
+//         const blogHTML = blogPosts.map((blogPost) => `
+//         <section>
+//         <h2>${blogPost.title}</h2>
+//         <p>${blogPost.body}</p>
+//         </section>
+//         `).join(' ');
+
+//         store.blog.page = blogHTML;
+//         // section
+//         // <h2>titles</h2>
+//         // <p>body</P>
+//         // </section>
+//     });
