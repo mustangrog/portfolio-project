@@ -1,5 +1,4 @@
-export default function(state){
-    return `
+export default (state) => `
 <header>
 <div>
   <h1>${state.title}</h1>
@@ -7,5 +6,4 @@ export default function(state){
 </div>
 </header>
 `
-    ;
-}
+;

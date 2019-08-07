@@ -198,6 +198,6 @@ function render(state){
 render(store.home);
 // The elements will not exist until page is rendered.  This is placed after the render item.
 
-router.on(':view', function renderFromParams(params){
+router.on(':view', (params) => {
     render(store[params.view]);
 }).resolve();
